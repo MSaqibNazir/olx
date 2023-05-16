@@ -70,3 +70,168 @@ a {
 .brand-items-icons:hover {
   fill: #3a77ff;
 }
+
+.nav {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: max-width 0.25s ease-in;
+  display: flex;
+  padding: 1rem 0;
+}
+
+@media (max-width: 1280px) {
+  .nav {
+    max-width: 1024px;
+  }
+}
+.nav-brand-container {
+  margin: auto;
+}
+
+.nav-brand {
+  display: flex;
+}
+
+.nav-brand-icon {
+  height: 3.5rem;
+  margin: auto;
+}
+
+/* ._8d2a668a, ._732f3cd0 */
+.nav-childs.nav-cities {
+  width: 27.2rem;
+  min-width: 27.2rem;
+}
+
+.nav-childs {
+  display: inline-block;
+  margin: 0 1.6rem 0 3.5rem;
+}
+
+.nav-container {
+  display: flex;
+  height: 48px;
+  max-height: 100%;
+  background-color: #fff;
+  border: 2px solid #012f34;
+  border-radius: 4px;
+}
+
+.nav-container:active {
+  border-color: #00bcd1;
+}
+
+.nav-container:hover {
+  border-color: #00bcd1;
+  transition: border-color 0.2s ease;
+}
+/* .cities-container: {
+  border: 2px solid #00bcd1;
+} */
+
+.nav-items {
+  display: flex;
+  align-items: center;
+}
+
+.city-search-icon {
+  margin-left: 0.8rem;
+  fill: #002f34;
+}
+
+.search-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.cities-trigger {
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-right: 1.6rem;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.nav-input {
+  color: #002f34;
+  font-size: 1.596rem;
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0 0 0 1.2rem;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  resize: none;
+}
+
+.nav-searchbar {
+  flex: 1;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #002f34;
+  border-radius: 0 0.4rem 0.4rem 0;
+  height: 48px;
+  width: 48px;
+}
+.nav-searchbar {
+  width: 100%;
+}
+.nav-searchbar .nav-container {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 0.4rem 0 0 0.4rem;
+  border-right: 0;
+}
+
+.search-btn-icon {
+  fill: #fff;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  margin-left: 3.2rem;
+}
+
+.login-button {
+  background: none;
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+  border: none;
+  border-bottom: 2px solid #002f34;
+}
+
+.login-button:active,
+.login-button:focus {
+  outline: none;
+}
+.login-button:hover {
+  border-bottom: 2px solid transparent;
+}
+
+.login-btn-matter {
+  font-weight: 700;
+  font-size: 1.596rem;
+}
