@@ -235,3 +235,43 @@ a {
   font-weight: 700;
   font-size: 1.596rem;
 }
+
+.sell {
+  margin-left: 2rem;
+}
+.sell-btn {
+  background: none;
+  border: none;
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  display: flex;
+  pointer-events: auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.sell-btn-icon {
+  height: 4.8rem;
+  width: 10.4rem;
+}
+
+.sell-btn-content {
+  display: flex;
+  position: absolute;
+  top: 1.6rem;
+  left: 2.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-plus {
+  margin-right: 0.4rem;
+}
+
+.sell-btn-text {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
