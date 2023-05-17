@@ -26,6 +26,12 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+}
+
 .body-wrapper {
   min-height: 100%;
   display: flex;
@@ -330,6 +336,11 @@ a {
   display: inline-block;
   margin: 0 0.8rem;
 }
+
+.catagories-items a:hover {
+  color: #00bcd1;
+  transition: color 0.3s;
+}
 .catagories-items-text {
   font-size: 1.4rem;
   display: flex;
@@ -438,26 +449,79 @@ a {
 
 .products {
   display: flex;
-
+  width: 100%;
   max-width: 1280px;
   margin: 1.6rem auto;
   width: 100%;
+  flex-direction: column;
+}
+
+.products-contianer {
+  padding: 0 1.6rem;
+}
+.products-heading {
+  font-size: 1.988rem;
+  display: block;
+  font-size: 1.596rem;
+  color: #002f34;
+  margin-bottom: 0.8rem;
+}
+
+@media only screen and (min-width: 950px) {
+  .products-heading {
+    font-size: 2.394rem;
+  }
+}
+
+.products-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 0.8rem;
+}
+
+.products-list li {
+  background: #00bcd1;
+  width: calc(50% - 0.4rem);
+  height: 28.9rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0;
+}
+@media (max-width: 950px) {
+  .products-list li {
+    height: 28.8rem;
+    margin-top: 0.8rem;
+  }
+  .products-list li:not(:nth-child(2n)) {
+    margin-right: 0.8rem;
+  }
+}
+
+@media (min-width: 950px) {
+  .products-list li {
+    width: calc(25% - 0.6rem);
+  }
+}
+@media (min-width: 950px) {
+  .products-list li:not(:nth-child(4n)) {
+    margin-right: 0.8rem;
+  }
 }
 
 .top-btn {
   background: none;
   appearance: none;
-  margin: 0;
+  margin: 2rem 0;
   cursor: pointer;
   color: inherit;
   color: #002f34;
-  position: fixed;
+  position: relative;
   /* top: 12rem; */
   left: 50%;
   right: unset;
   bottom: unset;
   z-index: 6;
-  min-width: 15rem;
+  width: 15rem;
   background-color: #fff;
   border: none;
   border-radius: 5rem;
@@ -495,4 +559,8 @@ a {
   font-size: 1.4rem;
   letter-spacing: 0.05rem;
   font-weight: 700;
+}
+
+.footer {
+  height: 300px;
 }
