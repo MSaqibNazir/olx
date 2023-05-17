@@ -435,3 +435,64 @@ a {
     animation-timing-function: ease;
   }
 }
+
+.products {
+  display: flex;
+
+  max-width: 1280px;
+  margin: 1.6rem auto;
+  width: 100%;
+}
+
+.top-btn {
+  background: none;
+  appearance: none;
+  margin: 0;
+  cursor: pointer;
+  color: inherit;
+  color: #002f34;
+  position: fixed;
+  /* top: 12rem; */
+  left: 50%;
+  right: unset;
+  bottom: unset;
+  z-index: 6;
+  min-width: 15rem;
+  background-color: #fff;
+  border: none;
+  border-radius: 5rem;
+  box-shadow: 0 0.2rem 0.8rem 0 rgba(0, 0, 0, 0.15);
+  padding: 0 1rem;
+  height: 4.4rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  transform: translate(-50%);
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.top-btn:active,
+.top-btn:focus {
+  outline: none;
+}
+
+.top-btn-link {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.back-to-top-icon {
+  display: inline;
+  height: 2rem;
+  width: 2rem;
+}
+.back-to-top-text {
+  font-size: 1.4rem;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+}
