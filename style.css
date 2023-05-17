@@ -351,13 +351,14 @@ ul {
 }
 
 .banner {
-  width: calc(100% - 3.2rem);
+  /* width: calc(100% - 3.2rem); */
+  max-width: 1280px;
   margin: 1.6rem 1.6rem 0;
   position: relative;
 }
-@media (min-width: calc(1312px)) {
+@media only screen and (min-width: calc(1312px)) {
   .banner {
-    width: unset;
+    width: 100%;
     max-width: 1280px;
     margin: 1.6rem auto 0;
   }
@@ -370,18 +371,29 @@ ul {
 
 .banner-slider-container {
   height: 18rem;
-  width: 1280px;
+  max-width: 1280px;
+  width: 100%;
   margin: 0.8rem auto;
 }
 
-/* .banner-image {
-  height: 100%;
-  background: url("asset/images/banner/banner-800x600.jpeg");
-  background-repeat: repeat-x;
-  background-size: cover;
-  transform: translateX(200px);
-} */
-
+@media only screen and (max-width: 950px) {
+  .banner-slider-container {
+    height: 15rem;
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .banner-slider-container {
+    height: 12rem;
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .banner-slider-container {
+    height: 10rem;
+    max-width: 100%;
+  }
+}
 .banner-image-container {
   width: 100%;
   height: 100%;
@@ -446,6 +458,13 @@ ul {
     animation-timing-function: ease;
   }
 }
+@media only screen and (max-width: 950px) {
+  .slider .slide {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
 
 .products {
   display: flex;
@@ -481,7 +500,7 @@ ul {
 }
 
 .products-list li {
-  background: #00bcd1;
+  /* background: #00bcd1; */
   width: calc(50% - 0.4rem);
   height: 28.9rem;
   margin-top: 0.8rem;
@@ -506,6 +525,151 @@ ul {
   .products-list li:not(:nth-child(4n)) {
     margin-right: 0.8rem;
   }
+}
+
+.products-list-items {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  border: 0.1rem solid rgba(0, 47, 52, 0.2);
+  border-radius: 4px;
+  height: 100%;
+  width: 100%;
+}
+
+.product-picture-container {
+  height: 60%;
+  background-color: #fff;
+  margin: 0;
+  background-color: #222;
+  position: relative;
+  border-bottom: 0.1rem solid rgba(0, 47, 52, 0.2);
+  height: 56%;
+}
+
+@media only screen and (min-width: 768px) {
+  .product-picture-container {
+    height: 52%;
+  }
+}
+.product-picture {
+  margin: auto;
+  height: 100%;
+  width: 100;
+  object-fit: cover;
+}
+
+.products-content-container {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0.8rem 0.875rem 0.6rem 1.6rem;
+  height: 44%;
+}
+
+@media only screen and (min-width: 768px) {
+  .products-content-container {
+    padding: 0.8rem 1rem 1rem 1.7rem;
+    height: 48%;
+  }
+}
+
+.product-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: auto;
+  position: relative;
+  line-height: 1.8rem;
+}
+
+.product-heading {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #002f34;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  white-space: unset;
+  width: 85%;
+}
+
+@media (min-width: 768px) {
+  .product-heading {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    margin-bottom: 0.6rem;
+  }
+}
+
+.product-price-container {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0.4rem 0 0;
+}
+
+.product-price {
+  color: #002f34;
+}
+
+.favorite-btn {
+  height: 2.4rem;
+  width: 2.4rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@media (max-width: 950px) {
+  .favorite-btn {
+    height: 1.8rem;
+    width: 1.95rem;
+  }
+}
+
+.favorite-btn-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.fav-icon {
+  fill: #ffffff !important;
+}
+.fav-icon:hover {
+  fill: #ff0000 !important;
+  transition: fill 0.25s;
+}
+
+.product-footer {
+  margin-top: auto;
+  color: #61797d;
+  font-size: 1.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.footer-content {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.footer-adress,
+.footer-time {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.footer-content-separator {
+  margin: 0 0.4rem;
 }
 
 .top-btn {
