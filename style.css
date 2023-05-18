@@ -47,6 +47,11 @@ ul {
   z-index: 6;
   border-bottom: 0 solid #dedede;
 }
+@media only screen and (max-width: 620px) {
+  .header {
+    height: 35px;
+  }
+}
 
 .brand-container {
   max-width: 1280px;
@@ -57,54 +62,62 @@ ul {
   align-items: center;
   margin-top: 1rem;
   justify-content: flex-start;
-  margin-top: 1rem;
 }
 
 @media only screen and (max-width: 1280px) {
   .brand-container {
+    margin: 0;
     max-width: 1024px;
   }
 }
 
 @media only screen and (max-width: 620px) {
   .brand-container {
+    height: 35px;
+    align-items: center;
     max-width: 100%;
     justify-content: space-between;
     border-bottom: 1px solid #c3c3c3;
+    overflow: hidden;
   }
 }
 
 .brand-items {
   margin-right: 4rem;
+  display: flex;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 620px) {
   .brand-items {
-    margin: 0 2rem;
+    margin: 0 auto;
   }
 }
 .menu {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
-  padding-bottom: 1rem;
+  /* padding-bottom: 1rem; */
+  margin-left: auto;
 }
 .menu-btn {
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 2rem;
   display: none;
 }
 
 .menu-btn-brand {
-  margin-left: 2rem;
+  margin-left: 1rem;
   display: none;
 }
 
 @media only screen and (max-width: 620px) {
+  .menu {
+    display: flex;
+  }
   .brand-items-hide {
     display: none;
   }
@@ -132,9 +145,24 @@ ul {
   fill: #3a77ff;
 }
 
+@media only screen and (max-width: 620px) {
+  .olx-logo {
+    width: 100%;
+    height: 1.5rem;
+    fill: #3a77ff;
+  }
+}
+
 .brand-items-icons {
   transition: fill 0.2s ease;
 }
+
+@media only screen and (max-width: 620px) {
+  .brand-items-icons {
+    height: 30px;
+  }
+}
+
 .brand-items-icons:hover {
   fill: #3a77ff;
 }
@@ -159,7 +187,7 @@ ul {
 .user {
   display: flex;
   align-items: center;
-  height: 120px;
+  height: 100px;
   width: 100%;
   border-bottom: 0.18rem solid #b8b8b8;
 }
@@ -169,8 +197,7 @@ ul {
   height: 60px;
   width: 60px;
   border-radius: 50px;
-  /* background: #d3d3d3; */
-  margin: 0 3rem;
+  margin: 0 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -181,6 +208,72 @@ ul {
   height: 80px;
 }
 
+.user-container-text a {
+  text-decoration: underline;
+}
+
+.user-container-text p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.menu-list {
+  height: 125px;
+  border-bottom: 0.18rem solid #b8b8b8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.menu-items {
+  margin: 0 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.menu-list-icons {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1.8rem;
+}
+
+.help-container {
+  height: 35px;
+  border-bottom: 0.18rem solid #b8b8b8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.login-btn {
+  max-width: 600px;
+  margin: 1rem;
+  height: 4rem;
+  background: #002f34;
+  cursor: pointer;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  transition: background 0.3s;
+}
+
+.login-btn:hover {
+  background: #004047;
+}
+
+.login-btn-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn-text {
+  font-weight: 700;
+  color: #fff;
+}
+/*  */
+
 .nav {
   max-width: 1280px;
   margin-left: auto;
@@ -188,6 +281,7 @@ ul {
   transition: max-width 0.25s ease-in;
   display: flex;
   padding: 1rem 0;
+  overflow: hidden;
 }
 
 @media (max-width: 1280px) {
@@ -414,6 +508,7 @@ ul {
   position: relative;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 1280px) {
