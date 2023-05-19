@@ -47,11 +47,11 @@ ul {
   z-index: 6;
   border-bottom: 0 solid #dedede;
 }
-/* @media only screen and (max-width: 620px) {
+@media only screen and (max-width: 620px) {
   .header {
-    height: 45px;
+    position: relative;
   }
-} */
+}
 
 .brand-container {
   max-width: 1280px;
@@ -525,6 +525,7 @@ ul {
 .nm-cities-container {
   margin: 1rem;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   height: 30px;
   max-height: 100%;
@@ -536,6 +537,22 @@ ul {
   margin-left: 1rem;
   font-weight: 700;
   font-size: 1.6rem;
+}
+
+.nm-searchbar {
+  background-color: #f7f8f8;
+  position: sticky;
+  top: 0;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky-padding {
+  padding-top: 60px;
 }
 
 .nm-searchbar-container {
@@ -781,6 +798,16 @@ ul {
   .banner-image-container,
   .slider {
     height: 9rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .banner,
+  .banner-slider-container,
+  .banner-image-container,
+  .slider {
+    margin: 0;
+    height: 8rem;
   }
 }
 
