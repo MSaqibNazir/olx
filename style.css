@@ -886,8 +886,14 @@ ul {
 /* Catagories for mobile */
 .m-catagories {
   padding: 0.8rem 0 1.6rem;
+  display: none;
 }
 
+@media only screen and (max-width: 620px) {
+  .m-catagories {
+    display: block;
+  }
+}
 .cat-container {
   max-width: 1280px;
   margin-left: auto;
